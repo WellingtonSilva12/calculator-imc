@@ -39,6 +39,7 @@ button {
 }
 
 .card {
+  position: relative;
   max-width: 69rem;
 
   padding: 3.8rem 5.4rem 5.4rem;
@@ -47,6 +48,8 @@ button {
   background-color: aliceblue;
   box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.1);
   border-radius: 6px;
+
+  overflow: hidden;
 }
 
 .card .title {
@@ -162,4 +165,27 @@ form button:hover {
 
 .close i:hover {
   color: #929292;
+}
+
+.alert-error.open {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.alert-error {
+  position: absolute;
+  background-color: var(--bg-error);
+  bottom: 0.9rem;
+  left: 0;
+  right: 0;
+  text-align: center;
+  color: var(--text-button);
+  padding: 0.8rem 0;
+  font-weight: bold;
+  transform: translateY(30px);
+  transition: transform 0.3s ease-in;
+
+  visibility: hidden;
+  opacity: 0;
 }
