@@ -18,13 +18,13 @@
     />
 
     <link rel="stylesheet" href="style.css" />
-    <script src="script.js" defer></script>
+    <script src="./js/script.js" type="module" defer></script>
     <title>Calculadora IMC</title>
   </head>
   <body>
     <div class="container">
+      <div class="alert-error">Digite somente números</div>
       <main class="card">
-        <div class="alert-error">Digite somente números</div>
         <form>
           <h1 class="title">Calcular IMC <i class="bx bxs-calculator"></i></h1>
           <div class="input-wrapper">
@@ -34,6 +34,7 @@
               id="weight"
               placeholder="60"
               class="input-text"
+              required
             />
           </div>
           <div class="input-wrapper">
@@ -43,6 +44,7 @@
               id="height"
               placeholder="165"
               class="input-text"
+              required
             />
           </div>
           <button type="submit">Calcular</button>
