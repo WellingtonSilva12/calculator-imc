@@ -1,5 +1,7 @@
 import { Modal } from './modal.js'
 
+const messageText = document.querySelector('.message-text')
+
 export function notNumber(value) {
   return isNaN(value) || value == ''
 }
@@ -10,10 +12,8 @@ export function displayResultMessage(result) {
   Modal.message.innerText = message
   Modal.open()
 
-  const messageText = document.querySelector('.message-text')
-
   if (result < 19) {
-    messageText.innerHTML = `<p>Abaixo do Peso Normal</p>`
+    messageTextClassification.underWeight
   } else if (result > 19 && result < 25) {
     messageText.innerHTML = `<p>Peso Normal</p>`
   } else if (result > 25 && result < 29) {
@@ -25,4 +25,8 @@ export function displayResultMessage(result) {
   } else if (result >= 40) {
     messageText.innerHTML = `<p>Obesidade Grau III</p>`
   }
+}
+
+const messageTextClassification = {
+  underWeight: (messageText.innerHTML = `<p>Abaixo do Peso Normal</p>`)
 }
